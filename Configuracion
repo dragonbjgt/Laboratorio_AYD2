@@ -1,0 +1,25 @@
+#estos comandos son para configurar de proxy inverso a nginex para rederigir el puerto 8080 al 80
+#tambien tiene la opcion de avilitar en su vm el puerto 8080 para trafico de http
+#estos comandos son para un SO Ubuntu.
+apt update
+apt install nginx
+unlink /etc/nginx/sites-enabled/defaultcd
+cd /etc/nginx/sites-available
+nano reverse-proxy.conf
+#dentro del archivo reverse-proxy.conf agregar lo siguiente--------
+
+server {
+        listen 80;
+        listen [::]:80;
+        access_log /var/log/nginx/reverse-access.log;
+        error_log /var/log/nginx/reverse-error.log;
+        location / {
+                 proxy_pass          http://localhost:8080;
+                 proxy_read_timeout  90;
+                 # Fix the “It appears that your reverse proxy set up is broken" error.
+                 proxy_redirect      http://localhost:8080 http://104.197.253.11;
+    }
+}
+#-----------
+sudo systemctl enable nginx
+sudo systemctl restart nginx
