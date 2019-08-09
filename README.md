@@ -1,2 +1,2 @@
-#Archivos con configuraciones varias que se daran durante el laboratorio
+# Archivos con configuraciones varias que se daran durante el laboratorio
 
