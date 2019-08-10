@@ -11,7 +11,10 @@ pipeline{
 
     }
     post{
-	sh 'echo "FIN"'
+	    always{
+	    	sh 'echo "FIN"'
+	    }
+	
     }
 }
 
