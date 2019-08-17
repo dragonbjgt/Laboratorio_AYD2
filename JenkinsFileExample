@@ -9,7 +9,7 @@ pipeline{//siempre inicia con esta palabra reservada
     
     stages{//segmentosque conforman el pipeline que tiene una o mas tareas que realizar
         stage('build'){
-            enviroment{
+            environment{
                 KEY = 'HOLA'//varialbe local del stage
             }
             steps{
@@ -17,7 +17,7 @@ pipeline{//siempre inicia con esta palabra reservada
             }
         }
         stage('Unit-Test'){
-            enviroment{
+            environment{
                 KEY = '1'
             }
             when{//con when podemos realizar una condicional para hacer que se ejecute o no el stage
