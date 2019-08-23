@@ -1,3 +1,3 @@
-# Archivos con configuraciones varias que se daran durante el laboratorio
+#ARCHIVOS PARA CONFIGURAR SONARQUBE
 ................
 
