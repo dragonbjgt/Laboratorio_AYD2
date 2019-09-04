@@ -51,47 +51,69 @@ ions sonarqube
 *el parametro para -p n:9000; n tiene que ser un puerto de su maquina en donde el trafico tcp este habilitado
 
 # Configuraciones que se hacen en Sonarqube.
-- Generar Token para agregar servidor en jenkins.
-
+1. Generar Token para agregar servidor en jenkins.
+Entrar a las configuraciones de la cuenta y luego a la pestaña de seguridad.
 ![imagen1][logo]
 
 [logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/Generacion-token-server.png "generacion token-server"
 
-guardar el token generado por que servira para crear una credencial en jenkins.
+*guardar el token generado por que servira para crear una credencial en jenkins.
 
-- Instalar plugins en el marketplace segun los lenguajes que se analizaran en el server.
-![imagen2][logo]
+2. Instalar plugins en el marketplace segun los lenguajes que se analizaran en el server.
+![imagen2][logo2]
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/instalar-plugin-segun-lenguaje-a-analizar.png " instalar plugins en sonarqube"
+[logo2]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/instalar-plugin-segun-lenguaje-a-analizar.png " instalar plugins en sonarqube"
 
-- crear un proyecto nuevo.
-![imagen3][logo]
+3. crear un proyecto nuevo.
+![imagen3][logo3]
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/crear-proyecto-nuevo.png "crear proyecto nuevo"
+[logo3]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/crear-proyecto-nuevo.png "crear proyecto nuevo"
 
-1. darle nombre a proyecto.
-![imagen4][logo]
+- darle nombre a proyecto.
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/nombre-proyecto.png "nombre del proyecto"
+![imagen4][logo4]
 
-2. generar token del proyecto y seguir el wizard hasta obtener el comando para conectar al proyecto desde el cliente.
+[logo4]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/nombre-proyecto.png "nombre del proyecto"
 
-![imagen5][logo]
+- generar token del proyecto y seguir el wizard hasta obtener el comando para conectar al proyecto desde el cliente.
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/configuracion-token-del-proyecto.png"token y comando para el proyecto"
+![imagen5][logo5]
 
-- Crear webhook en el proyecto de sonarqube para comunicar el estado del analisis a jenkins.
+[logo5]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/configuracion-token-del-proyecto.png "token y comando para el proyecto"
 
-![imagen6][logo]
+4. Crear webhook en el proyecto de sonarqube para comunicar el estado del analisis a jenkins.
+Ir a las configuraciones del proyecto, depsues a la pestaña de administracion y seleccionar webhooks
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/crear-webhook-jenkins-sonar1.png"opcion de webhook en el proyecto"
+![imagen6][logo6]
 
-![imagen7][logo]
+[logo6]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/crear-webhook-jenkins-sonar1.png "opcion de webhook en el proyecto"
 
-[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/webhook-sonar-jenkins-2.png"configurar webhook"
+![imagen7][logo7]
+
+*cambiar la ip a la maquina donde esta su servidor jenkins.
+
+[logo7]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/webhook-sonar-jenkins-2.png "configurar webhook"
 
 
 # Configuracion de Sonarqube en jenkins
 ### Las siguientes configuraciones las tendran que realizar en el servidor de jenkins.
-```
-```   
+
+1. Instalar pluguin Sonarquebe en jenkins.
+![imagen8][logo8]
+
+[logo8]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/Instalar-pluguin-Sonarqube.png "instalacion del pluguin"
+
+2. Configurar credencial con el token generado en sonarquebe. ver la imagen1.
+![imagen9][logo9]
+
+[logo9]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/crear-credencial-token-sonarqube.png "agregar servidor jenkins"
+
+3. Configurar el servidor de Sonarqube en las configuraciones del sistema.
+![imagen10][logo10]
+
+[logo10]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/agregar-servidor-jenkins.png "agregar servidor jenkins"
+
+4. Configurar el scanner en las configuraciones de herramientas.
+
+![imagen11][logo11]
+[logo11]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/agregar-tool.png "agregar scanner"
