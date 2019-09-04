@@ -52,9 +52,15 @@ ions sonarqube
 
 # Configuraciones que se hacen en Sonarqube.
 - Generar Token para agregar servidor en jenkins
-[diagrama][logo]
+[imagen1][logo]
 
-[logo]: https://github.com/byronjl2003/SA_Tarea2/blob/master/diagramas/solicitud-servicio.png?raw=true "solicitud de ube"
+[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/Generacion-token-server.png "generacion token-server"
+guardar el token generado por que servira para crear una credencial en jenkins.
+
+- Instalar plugins en el marketplace segun los lenguajes que se analizaran en el server.
+[imagen2][logo]
+
+[logo]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/instalar-plugin-segun-lenguaje-a-analizar.png " instalar plugin en sonarqube"
 
 # Configuracion de Sonarqube en jenkins
 ### Las siguientes configuraciones las tendran que realizar en el servidor de jenkins.
