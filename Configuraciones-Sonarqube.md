@@ -119,4 +119,5 @@ Ir a las configuraciones del proyecto, depsues a la pestaña de administracion y
 4. Configurar el scanner en las configuraciones de herramientas.
 
 ![imagen11][logo11]
+
 [logo11]: https://raw.githubusercontent.com/dragonbjgt/Laboratorio_AYD2/Confs-Sonnarqube/imagenes/agregar-tool.png "agregar scanner"
